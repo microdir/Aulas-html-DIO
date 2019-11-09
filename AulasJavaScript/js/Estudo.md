@@ -3,24 +3,26 @@
 ## Bloco 1
 
 ### História
-*Lançado em 1995
-*Criado por Brendan Eich na Netscap
-*ECMAScript - ECMAScript é uma especificação de linguagem script criada pela Ecma International, utilizada por linguagens como: ActionScript, JScript e Javascript.
-*TC39 - desenvolve e mantém padrões para o ECMAScript
-*Fluxo de propostas:
-	*Stage 0: strawman
-	*Stage 1: proposal (escolha do campeão)
-	*Stage 2: draft (descrição formal e semântica da funcionalidade)
-	*Stage 3: candidate (especificação deve estar completa)
-	*Stage 4: finished 
+* Lançado em 1995
+* Criado por Brendan Eich na Netscap
+* ECMAScript - ECMAScript é uma especificação de linguagem script criada pela Ecma International, utilizada por linguagens como: ActionScript, JScript e Javascript.
+* TC39 - desenvolve e mantém padrões para o ECMAScript
+* Fluxo de propostas:
+	* Stage 0: strawman - submete-se um formulário de contribuição por um colaborador cadastrado.
+	* Stage 1: proposal (escolha do campeão)
+	* Stage 2: draft (descrição formal e semântica da funcionalidade)
+	* Stage 3: candidate (especificação deve estar completa)
+	* Stage 4: finished 
 
 ### Conceitos
-*Linguagem interpretada (código executado de cima para baixo)
-*Liguagem de tipagem fraca e dinânima (aceita soma entre dois tipos de variáveis)
-*Funções de primeira classe - É possível atribuir funções a variáveis, retornar funções de outras funções e passar funções como parâmetro para outras funções.
-*Closure - capacidade de uma função "lembrar" do ambiente em que foi criada
-*Curryng - Pega função com n parâmentros e retorna uma função com apenas um parâmetro
-*Hoisting (elevar) - Mesmo que a função seja criada abaixo de onde ela é chamada, mesmo assim vai funcionar; Hoisting de variavel eleva apenas sua criação. Hoisting ou içamento é a capacidade do JavaScript elevar a criação de variáveis e funções ao topo do escopo de suas criações. Existem dois tipos de Hoisting: hoisting de variável e hoisting de função.
+* Linguagem interpretada (código executado de cima para baixo)
+* Liguagem de tipagem fraca e dinânima (aceita soma entre dois tipos de variáveis)
+* Typescript - para boa prática de programação; tipagens; é um superset.
+* Semelhante ao typescript com relação a verificar tipagem, mas não é um superset;
+* Funções de primeira classe - É possível atribuir funções a variáveis, retornar funções de outras funções e passar funções como parâmetro para outras funções.
+* Closure - capacidade de uma função "lembrar" do ambiente em que foi criada; Com a inclusão do let e const, agora tem-se o escopo global, de função e de bloco.
+* Curryng - Pega função com n parâmentros e retorna uma função com apenas um parâmetro
+* Hoisting (elevar) - Mesmo que a função seja criada abaixo de onde ela é chamada, mesmo assim vai funcionar; Hoisting de variavel eleva apenas sua criação. Hoisting ou içamento é a capacidade do JavaScript elevar a criação de variáveis e funções ao topo do escopo de suas criações. Existem dois tipos de Hoisting: hoisting de variável e hoisting de função.
 
 ### Tipos e variáveis
 * var não respeita escopo de bloco

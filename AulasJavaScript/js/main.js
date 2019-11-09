@@ -1,6 +1,9 @@
+function init(){
+	const exemplo = 'A frase';
 
-function soma(n1, n2){
-	return n1+n2;
+	return function(){
+		console.log('Chamei a função 1: '+ exemplo +'.');
+	}
 }
 
-alert(soma(5,10));
+const initFn1 = init();
