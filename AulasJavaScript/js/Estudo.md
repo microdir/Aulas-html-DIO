@@ -1,5 +1,8 @@
 # CURSO DE JS ES6 essencial
 
+## Introdução
+* Os dados a seguir são anotações referentes às aulas que assisti nos cursos oferecidos durante a Bootscamp nov/2019 da Digital Innovation One, portanto, não se trata de um artigo, são apenas anotações que porerão ser utilizadas para revisões futuras.
+
 ## Bloco 1
 
 ### História
@@ -167,7 +170,7 @@ function teste(){
 	```
 
 ### Operadores
-*Aritméticos
+* Aritméticos
 	* Operador binário
 	```
 	3 + 1
@@ -176,11 +179,11 @@ function teste(){
 	```
 	x++
 	```
-*Atribuição
+* Atribuição
 	```
 	x = y
 	```
-*Comparação
+* Comparação
 	```
 	==
 	!=
@@ -191,22 +194,22 @@ function teste(){
 	>=
 	<=
 	```
-*Condicional
+* Condicional
 	```
 	condição ? valorSeVerdadeiro : valorSeFalso
 	true ? "escreve 1" : "escreve 2" //Saída é escreve 1
 	```
-*Lógicos
+* Lógicos
 	```
 	var v = true && false //e
 	var v = true || false //ou
 	```
-*Spread
+* Spread
 	```
 	var partes = ["ombro", "joelho"]; 
 	var corpo = ["cabeça", ...partes, "pés"];
 	```
-*Outros
+* Outros
 	```
 	var coisa = ["juarez", "colher", "jujuba"]; 
 	
@@ -380,11 +383,88 @@ do{
 
 ## Bloco 4
 	
-	### Arrays
-	```
-	const arr = [1, 2, 3];
-	const arr2 = new Array(1, 2, 3);
-	```
+### Arrays
+```
+const arr = [1, 2, 3];
+const arr2 = new Array(1, 2, 3);
+const persons = Array.of(1, 2, 3);
+const arr2 = Array(3); //array com 3 posições vazias
+const arr2 = Array(3, 2); //vetor [3, 2]
+//Armazena as divs em um array
+const divs = document.querySelectorAll('div');
+const arr = Array.from(divs);
+```
+* Inserir elementos
+```
+push('elemento');//insere o elemento no final e retorna o tamanho do array depois da inserção.
+unshift('elemento') //insere no começo e retorna o tamanho do array
 
+pop() //remove o último elemento do array e retorna o item removido
+shift() //remove no início e retorna o elemento removido
 
+const frutas = ['limao', 'laranja'];
+const outras = ['acerola'];
+const alimentos = frutas.concat(outras); //faz um merge entre os dois arrays
+const alimentos = frutas.slice(0, 2); //fatia e retorna pra um novo array
+const alimentos = frutas.slice(2); //pega a partir do indice 2
+const alimentos = frutas.slice(-2); //pega de forma inversa
+const alimentos = frutas.splice(2); //remove a partir do indice indicado e retorna esses itens
+const alimentos = frutas.splice(0,0,'banana'); //a partir do índice 0 não remove nada e adiciona a fruta banana
+```
+
+* Iterar elemento de um array
+```
+const arr = [1,2,3,4,5];
+arr.forEach((value, index) => console.log(value, index));
+
+//map retorna um novo array
+const a = arr.map(value => value * 2);
+
+//flat retorna um array que seja a concatenação de todos os subarray desse array de acordo com a profundidade indicada. Faz isso de forma recursiva
+const arr = [1,2,3,[4,5]];
+arr.flat() //retorna [1,2,3,4,5]. A profundidade por padrão é 1.
+
+//flatMap é a junção do flat com o map
+
+//keys retorna um array iterator com todas as chaves de iteração do array
+arr.keys();
+arrIterator.next();
+
+//values retorna um array iterator com todos os valores de iteração do array
+arr.values();
+arrIterator.next();
+
+//também é possível com o entries
+```
+
+* Buscar elemento
+```
+//Eles percorrem o array
+arr.find(value => value > 2) //retorna o primeiro item que é maior que 2
+
+arr.findIndex(value => value > 2) //retorna o índice do primeiro item que é maior que 2
+
+arr.filter(value => value > 2) //retorna todos os elemento que o valor é maior que 2
+
+arr.indexOf('elemento')//retorna o primeiro índice em que o elemento pode ser encontrado no array
+
+arr.lastIndexOf('elemento')//retorna a última ocorrência em que o elemento pode ser encontrado no array
+
+arr.includes(1) //retorna verdadeiro se houver esse valor no array
+
+arr.some(value => value%2 === 0) //tem algum número par? retorna true ou false
+
+array.every(value => value%2===0) //todos os números são pares?
+
+array.sort((current, next) ==> current.elemento - next.elemento) //ordena o array de acordo com a função de ordenação
+
+array.reverse() //inverte o array
+
+array.join('-') // retorna uma string do tipo 1-2-3-4-5
+
+array.reduce((total, value) => total += value, 0); //o total é o valor a ser retornado, o value é o valor corrente, o parâmetro 0 indica que o return será um inteiro.
+```
+
+## Conclusão
+* Encontrei algumas dificuldades para o aprendizado do blobo 3; Durante a execução da atividade avaliativa no bloco 4, havia muito ruído no meu ambiente, o que atrapalhou bastante a concentração, onde não consegui a nota esperada. Porém, em um segundo momento realizei a atividade novamente e consegui acertar os 100%.
 
