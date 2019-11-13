@@ -1,9 +1,11 @@
-function init(){
-	const exemplo = 'A frase';
+(() => {
+	this.name = "michel";
+	const getNameArrowFn = () => this.name;
 
-	return function(){
-		console.log('Chamei a função 1: '+ exemplo +'.');
+	const user = {
+		name: 'Nome do objeto',
+		getNameArrowFn
 	}
-}
 
-const initFn1 = init();
+	testes(user.getNameArrowFn());
+})();
